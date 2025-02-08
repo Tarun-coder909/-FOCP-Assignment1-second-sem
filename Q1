@@ -1,0 +1,39 @@
+
+#include <iostream>
+using namespace std;
+int main(){
+    int num;
+    cin>>num;
+    int i;
+    int nextprime=num+1;
+    int flag=1;
+    for(i=2;i<=num/2;i++){
+        if(num%i==0){
+            flag=0;
+            break;
+
+        }
+
+    }
+    if (flag==1){
+        cout<<"it is prime"<<endl;
+        for(i=2;i<nextprime/2;i++){
+            if(nextprime%i!=0){
+                flag=0;break;
+            }
+        
+        }if (flag==0){
+            cout<<nextprime<<endl;
+        }
+        nextprime++;
+    
+    }
+    else 
+        cout<<"not prime but factors are-"<<endl;
+        
+        for(i=1;i<=num;i++){
+            if(num%i==0){
+            cout<<i<<endl;
+        }
+        
+}}
